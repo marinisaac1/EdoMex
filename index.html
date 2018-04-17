@@ -48,6 +48,15 @@
           preserveViewport: false,
           map: map
         });
+
+    var src3='https://github.com/marinisaac1/EdoMex/blob/master/casillasEdoMex.kmz?raw=true';
+    alert(src3);
+
+    var kmlLayer = new google.maps.KmlLayer(src3, {
+          suppressInfoWindows: true,
+          preserveViewport: false,
+          map: map
+        });
     
     // var src2='http://www.ift.org.mx/sites/default/files/kml/telcel_lte_mex_0.kmz';
     // var kmlLayer2 = new google.maps.KmlLayer(src2, {
