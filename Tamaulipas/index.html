@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>EdoMex</title>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+
+
+  function initMap() {
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 8,
+      center: {lat: 19.3255714, lng: -100.7263065}
+    });
+
+    //var src='telcel_umts_95_datos_mex_3 (1).kmz';
+
+    var src='https://github.com/marinisaac1/EdoMex/blob/master/Telcel3GRojo.kmz?raw=true';
+    //alert(src);
+
+    var kmlLayer1 = new google.maps.KmlLayer(src, {
+          suppressInfoWindows: true,
+          preserveViewport: false,
+          map: map
+        });
+
+    var src2='https://github.com/marinisaac1/EdoMex/blob/master/TelcelLTEAzul.kmz?raw=true';
+    //alert(src2);
+
+    var kmlLayer2 = new google.maps.KmlLayer(src2, {
+          suppressInfoWindows: true,
+          preserveViewport: false,
+          map: map
+        });
+
+    var src4='https://github.com/marinisaac1/EdoMex/blob/master/MCDatosColoreadosRosa.kmz?raw=true';
+    //alert(src4);
+
+    var kmlLayer4 = new google.maps.KmlLayer(src4, {
+          //suppressInfoWindows: true,
+          preserveViewport: false,
+          map: map
+        });
+
+    var src3='https://github.com/marinisaac1/EdoMex/blob/master/casillasEdoMexResumidasColoreadas.kmz?raw=true';
+    //alert(src3);
+
+    var kmlLayer3 = new google.maps.KmlLayer(src3, {
+          //suppressInfoWindows: true,
+          preserveViewport: false,
+          map: map
+        });
+
+
+    
+    // var src2='http://www.ift.org.mx/sites/default/files/kml/telcel_lte_mex_0.kmz';
+    // var kmlLayer2 = new google.maps.KmlLayer(src2, {
+    //       suppressInfoWindows: true,
+    //       preserveViewport: false,
+    //       fillColor: "#00FF00",
+    //       map: map
+    //     });
+      
+      }
+
+    
+
+      
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhnoN24Y5SdB_DUB2pgYEFj4LTSrH0v-k&callback=initMap">
+    </script>
+  </body>
+</html>
